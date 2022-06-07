@@ -1,0 +1,73 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(541, 310)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.radioButton = QtWidgets.QRadioButton(self.centralwidget)
+        self.radioButton.setGeometry(QtCore.QRect(220, 120, 82, 17))
+        self.radioButton.setObjectName("radioButton")
+        self.radioButton_2 = QtWidgets.QRadioButton(self.centralwidget)
+        self.radioButton_2.setGeometry(QtCore.QRect(220, 150, 82, 17))
+        self.radioButton_2.setObjectName("radioButton_2")
+        self.radioButton_3 = QtWidgets.QRadioButton(self.centralwidget)
+        self.radioButton_3.setGeometry(QtCore.QRect(220, 180, 82, 17))
+        self.radioButton_3.setObjectName("radioButton_3")
+        self.radioButton_4 = QtWidgets.QRadioButton(self.centralwidget)
+        self.radioButton_4.setGeometry(QtCore.QRect(220, 210, 82, 17))
+        self.radioButton_4.setObjectName("radioButton_4")
+        self.radioButton_5 = QtWidgets.QRadioButton(self.centralwidget)
+        self.radioButton_5.setGeometry(QtCore.QRect(220, 240, 82, 17))
+        self.radioButton_5.setObjectName("radioButton_5")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(180, 60, 171, 41))
+        self.label.setTextFormat(QtCore.Qt.PlainText)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setWordWrap(True)
+        self.label.setObjectName("label")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(80, 160, 75, 23))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(400, 160, 75, 23))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(80, 130, 111, 21))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(376, 130, 131, 20))
+        self.label_3.setObjectName("label_3")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.radioButton.setText(_translate("MainWindow", "RadioButton"))
+        self.radioButton_2.setText(_translate("MainWindow", "RadioButton"))
+        self.radioButton_3.setText(_translate("MainWindow", "RadioButton"))
+        self.radioButton_4.setText(_translate("MainWindow", "RadioButton"))
+        self.radioButton_5.setText(_translate("MainWindow", "RadioButton"))
+        self.label.setText(_translate("MainWindow", "Select Options"))
+        self.pushButton.setText(_translate("MainWindow", "Upload file"))
+        self.pushButton_2.setText(_translate("MainWindow", "Download pdf"))
+        self.label_2.setText(_translate("MainWindow", "Upload words file"))
+        self.label_3.setText(_translate("MainWindow", "download processed pdf"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
