@@ -27,7 +27,8 @@ def definations(word):
             if define.get('example'):
                 defination['Examples'] = define.get('example')
             all_definations.append(defination)
-    if len(all_definations) > 4:
+    if len(all_definations) > 5:
         sorted(all_definations, key=get_example)
-    return all_definations, link_url
+        return all_definations[:5], link_url, partOfSpeech
+    return all_definations, link_url, partOfSpeech
 
