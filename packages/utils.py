@@ -1,5 +1,5 @@
-from pdf_class import PDF
-from api_data import get_definations
+from .pdf_class import PDF
+from .api_data import get_definations
 
 
 
