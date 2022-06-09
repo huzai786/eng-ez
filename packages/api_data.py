@@ -7,10 +7,10 @@ def get_example(x):
     else:
         return False
 
-def definations(word):
+def get_definations(word):
     res = requests.get(
         f'https://api.dictionaryapi.dev/api/v2/entries/en/{word}')
-    link_url = res.json()[0].get('sourceUrls')
+    link_url = res.json()[0].get('sourceUrls')[0]
     meanings = res.json()[0].get('meanings')
     partOfSpeech = meanings[0].get('partOfSpeech')
     all_definations = []

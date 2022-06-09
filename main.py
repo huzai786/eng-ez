@@ -1,7 +1,8 @@
 from qtf import Ui_MainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QProgressBar, QVBoxLayout
-
+from packages.utils import print_pdf, get_words
+import webbrowser
 
 
 
@@ -17,10 +18,11 @@ class Engez(QtWidgets.QMainWindow, Ui_MainWindow):
         self.fname = QFileDialog.getOpenFileName(self, 'Open file')[0]
 
     def start_script(self):
-        with open(self.fname, 'r') as f:
-            lines = f.readlines()
-            for line in lines:
-                print(line)
+        lines = get_words(self.fname)
+        print_pdf(lines)
+        webbrowser.open('http://localhost:52330/definations.pdf')
+
+
 
 if __name__ == "__main__":
     import sys
