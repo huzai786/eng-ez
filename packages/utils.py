@@ -8,7 +8,7 @@ def print_pdf(list_of_words):
     pdf.add_page()
     pdf.set_font('Times', size=13)
     h = 20
-    definations = [get_definations(word) for word in list_of_words]
+    definations = [get_definations(word) for word in list_of_words if get_definations(word) != 'No defination Found!']
     words = [word for word in list_of_words]
     
     for data, word in zip(definations, words):
