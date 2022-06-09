@@ -2,7 +2,7 @@
 a short program to help your vocabulary
 # Set-up
  download zip
- type `virtualenv env`
- . env/Scripts/activate
- pip install -r requirements.txt
- python main.py
+ type `virtualenv env` \n
+ `. env/Scripts/activate` \n
+ `pip install -r requirements.txt` \n
+ `python main.py` \n
